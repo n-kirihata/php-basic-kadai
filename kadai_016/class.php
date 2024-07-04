@@ -16,7 +16,7 @@
         private $price;
 
         // 「price」プロパティの値を出力する「show_price」メソッドを作成
-        public function show_price(int $price) {
+        public function show_price() {
             echo $this->price . '<br>';
         }
 
@@ -34,7 +34,7 @@
         private $weight;
         private $height;
 
-        public function show_height(int $height) {
+        public function show_height() {
             echo $this->height . '<br>';
         }
 
@@ -43,11 +43,12 @@
             $this->weight = $weight;
             $this->height = $height;
         }
+        
     }
 
     // それぞれのクラスを元に任意の引数を渡してインスタンスを作成
     $food = new Food('potato', 250);
-    $animal = new Animal('dog', 60, 5000);
+    $animal = new Animal('dog', 5000, 60);
     
     // print_r関数を使いそれぞれのインスタンスを出力
     print_r($food);
@@ -56,8 +57,8 @@
     echo '<br>';
 
     // それぞれのクラスに作成したメソッドにアクセスしメソッドを実行
-    $food->show_price(250);
-    $animal->show_height(5000);
+    $food->show_price();
+    $animal->show_height();
     ?>
 </p>   
 </body>
